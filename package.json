@@ -12,6 +12,7 @@
     "antd-mobile": "^5.18.0",
     "antd-mobile-icons": "^0.3.0",
     "axios": "^0.27.2",
+    "hox": "2.0.0-alpha.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },

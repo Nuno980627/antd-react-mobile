@@ -1,9 +1,12 @@
-import { Result } from 'antd-mobile'
+import { Button, Result } from 'antd-mobile'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { SmileOutline } from 'antd-mobile-icons'
 import style from './home.module.less'
+import { useAccountStore } from '@/store'
 function Home(props: any) {
+  const { count, addCount } = useAccountStore()
+  console.log(count)
   return (
     <React.Fragment>
       <Result icon={<SmileOutline />} status="success" title="React-Mobile" />
@@ -16,8 +19,15 @@ function Home(props: any) {
         <div> less </div>
         <div> postcss-px-to-viewport </div>
         <div> eslint/prettier </div>
-        <div> tailwindCss </div>
         <Link to="/test">LINK其他页</Link>
+      </div>
+      <div className="text-green-600 text-[30px] w-[200px] mx-[auto] text-center">tailwindCss</div>
+      <div className="text-xs text-gray-400 text-center">(低版本浏览器兼容性有问题)</div>
+      <div className="text-green-600 text-[30px] w-[200px] mx-[auto] text-center">
+        state:{count}
+        <Button color="primary" fill="solid" size="mini" onClick={addCount}>
+          add
+        </Button>
       </div>
     </React.Fragment>
   )

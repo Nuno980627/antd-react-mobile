@@ -20,6 +20,6 @@
     },
     "plugins": [{"name": "typescript-plugin-css-modules"}],
   },
-  "include": ["src"],
+  "include": ["src","./type.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
