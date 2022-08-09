@@ -9,6 +9,12 @@
 - less
 - postcss-px-to-viewport
 - eslint/prettier
-- tailwindCss
+- WindiCss
+
+## change log
+- 2022-8-9  
+    - remove tailwindCss , use WindiCss instead
+    - improve Minimum broswer support version
+
 
 author:zhengzewei98@gmail.com

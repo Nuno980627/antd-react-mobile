@@ -3,14 +3,16 @@ import react from '@vitejs/plugin-react'
 const path = require('path')
 import eslintPlugin from 'vite-plugin-eslint' // 引入
 import legacy from '@vitejs/plugin-legacy'
+import WindiCSS from 'vite-plugin-windicss'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     legacy({
-      targets: ['chrome 52'], // 需要兼容的目标列表，可以设置多个
+      targets: ['chrome 69'], // 需要兼容的目标列表，可以设置多个
       additionalLegacyPolyfills: ['regenerator-runtime/runtime'] // 面向IE11时需要此插件
-    })
+    }),
+    WindiCSS()
     // eslintPlugin({
     //   include: ['src/**/*.js', 'src/**/*.vue', 'src/**/*.jsx', 'src/**/*.ts', 'src/**/*.tsx'],
     //   exclude: ['./node_modules/**'],
@@ -47,7 +49,6 @@ export default defineConfig({
     },
     postcss: {
       plugins: [
-        require('tailwindcss'),
         require('autoprefixer'),
         require('postcss-px-to-viewport')({
           viewportWidth: 375, //视窗的宽度，对应的是我们设计稿的宽度，一般是750

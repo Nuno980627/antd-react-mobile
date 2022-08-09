@@ -21,8 +21,10 @@ function Home(props: any) {
         <div> eslint/prettier </div>
         <Link to="/test">LINK其他页</Link>
       </div>
-      <div className="text-green-600 text-[30px] w-[200px] mx-[auto] text-center">tailwindCss</div>
-      <div className="text-xs text-gray-400 text-center">(低版本浏览器兼容性有问题)</div>
+      <div className="text-green-600 text-[30px] w-[200px] mx-[auto] text-center">windiCss</div>
+      <div className="text-xs text-gray-400 text-center">
+        (tailwind3对低版本浏览器兼容性有问题,由windiCss代替)
+      </div>
       <div className="text-green-600 text-[30px] w-[200px] mx-[auto] text-center">
         state:{count}
         <Button color="primary" fill="solid" size="mini" onClick={addCount}>
