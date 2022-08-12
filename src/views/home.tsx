@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom'
 import { SmileOutline } from 'antd-mobile-icons'
 import style from './home.module.less'
 import { useAccountStore } from '@/store'
+import { useTranslation } from 'react-i18next'
+import { changeLang } from '@/locale/index'
 function Home(props: any) {
   const { count, addCount } = useAccountStore()
+  const { t } = useTranslation()
   console.log(count)
   return (
     <React.Fragment>
@@ -29,6 +32,12 @@ function Home(props: any) {
         state:{count}
         <Button color="primary" fill="solid" size="mini" onClick={addCount}>
           add
+        </Button>
+      </div>
+      <div className="mt-[10px] flex justify-center">
+        <div className="text-violet-500 text-[30px]">i18n:{t('app.test')}</div>
+        <Button color="primary" fill="solid" size="mini" onClick={changeLang}>
+          切换
         </Button>
       </div>
     </React.Fragment>
