@@ -18,6 +18,10 @@
     - improve Minimum broswer support version
 - 2022-8-12
     - Add new features:i18n
+- 2022-8-15
+    - remove vite-plugin-eslint 
+    - support react-i18next typescript
+    - edit eslint config
 
 
 author:zhengzewei98@gmail.com
