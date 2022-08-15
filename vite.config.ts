@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 const path = require('path')
-import eslintPlugin from 'vite-plugin-eslint' // 引入
 import legacy from '@vitejs/plugin-legacy'
 import WindiCSS from 'vite-plugin-windicss'
 // https://vitejs.dev/config/
@@ -13,11 +12,6 @@ export default defineConfig({
       additionalLegacyPolyfills: ['regenerator-runtime/runtime'] // 面向IE11时需要此插件
     }),
     WindiCSS()
-    // eslintPlugin({
-    //   include: ['src/**/*.js', 'src/**/*.vue', 'src/**/*.jsx', 'src/**/*.ts', 'src/**/*.tsx'],
-    //   exclude: ['./node_modules/**'],
-    //   cache: false
-    // })
   ],
   server: {
     port: 4000, //启动端口
