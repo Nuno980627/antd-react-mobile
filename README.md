@@ -22,6 +22,8 @@
     - remove vite-plugin-eslint 
     - support react-i18next typescript
     - edit eslint config
+- 2022-8-19
+    - support customize svg icons
 
 
 author:zhengzewei98@gmail.com

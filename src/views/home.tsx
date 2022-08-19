@@ -6,6 +6,7 @@ import style from './home.module.less'
 import { useAccountStore } from '@/store'
 import { useTranslation } from 'react-i18next'
 import { changeLang } from '@/locale/index'
+import SvgIcon from '@/components/SvgIcon'
 function Home(props: any) {
   const { count, addCount } = useAccountStore()
   const { t } = useTranslation()
@@ -22,6 +23,7 @@ function Home(props: any) {
         <div> less </div>
         <div> postcss-px-to-viewport </div>
         <div> eslint/prettier </div>
+        <div>svg</div>
         <Link to="/test">LINK其他页</Link>
       </div>
       <div className="text-green-600 text-[30px] w-[200px] mx-[auto] text-center">windiCss</div>
